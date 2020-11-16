@@ -1,0 +1,207 @@
+body{
+    margin: 0px;  /*Para a margen do body n deixar os cantos das páginas branco*/
+    background-color: lightgrey;
+}
+
+header h1{
+    color:white;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight:bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+header{
+    padding-left: 35px;
+    padding-top: 1px;
+    background-image: url("parede.jpg");
+    height: 100px;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0px;
+}
+
+.cervejas{
+    padding-bottom: 20px;
+}
+
+@media (min-width:375px){ 
+
+    header h1{
+        text-align:center;
+    }
+    body{
+        text-align: center;
+    }
+    .proposito img{
+        display: none
+    }
+
+    .texto1{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .texto1 p{
+        font-size: 0.8 rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: justify;
+    }
+
+    .cervejas ul{
+        list-style-type: none;
+        text-align:left;
+        font-size: 1.3rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display:grid;
+        grid-auto-flow: row;
+        justify-content: center;
+        justify-items:center; 
+        grid-gap: 2rem;
+    }
+
+    .footer{
+        width: 100%;
+        bottom: 0px;
+    }
+}
+
+@media (min-width:550px){
+    body{
+        text-align: left;
+    }
+
+    .proposito{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .texto1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        grid-gap: 70px;
+    }
+
+    .para1{
+        grid-column: 1/2;
+        
+    }
+
+    .img1{
+        justify-self: end;
+        grid-column: 2/2;
+        padding-right: 1.5rem;
+    }
+
+    .texto1 p{
+        padding-left: 35px;
+        text-align:left;
+        font-size: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .cervejas ul{
+        list-style-type: none;
+        text-align:left;
+        font-size: 1.3rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display:grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        justify-items:center; 
+        grid-gap: 2rem;
+    }
+
+    .proposito img{
+        display: grid;
+        height: 300px;
+        width: 200px;
+    }
+
+
+}
+
+@media(min-width:775px){
+    .footer{
+        /*Para o footer ficar no final da página como um rodapé*/
+        width: 100%;
+        bottom: 0px;
+    }
+}
+
+h2{
+    padding-top: 10px;
+    padding-left: 35px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cervejas a,a:visited{
+    color: gray;
+    text-decoration: none;
+}
+
+.cervejas a:hover{
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.menu a,a:visited{
+    color:gray;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color:white;
+    text-decoration:none;
+    font-weight:bolder;
+
+}
+
+.footer ul{
+    list-style-type: none;
+    text-align:left;
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display:grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    justify-items:center;
+    grid-gap: 2rem;
+}
+
+.footer h3{
+    padding-left: 30px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer #azul{
+    color:dodgerblue;
+    font-size: 3rem;
+}
+
+.footer #vermelho{
+    color:red;
+    font-size:3rem;
+}
+
+.footer #azul:hover{
+    text-decoration: none;
+    color :dodgerblue;
+    opacity: 50%;
+}
+
+.footer #vermelho:hover{
+    text-decoration: none;
+    color: red;
+    opacity: 50%;
+}
+
+
+
+
