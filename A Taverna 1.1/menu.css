@@ -1,0 +1,285 @@
+body{
+    margin: 0px;  
+    background-color: lightgrey;
+}
+
+header h1{
+    color:white;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight:bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+header{
+    padding-left: 35px;
+    padding-top: 1px;
+    background-image: url("parede.jpg");
+    height: 100px;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0px;
+}
+
+.cervejas{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+@media (min-width:375px){ 
+
+    header h1{
+        text-align:center;
+    }
+    header, .main, .footer{
+        text-align: center;
+    }
+    .proposito img{
+        display: none
+    }
+
+    .texto1{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .texto1 p{
+        font-size: 0.8 rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: justify;
+    }
+
+    .cervejas ul{
+        list-style-type: none;
+        text-align:left;
+        font-size: 1.3rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display:grid;
+        grid-auto-flow: row;
+        justify-content: center;
+        justify-items:center; 
+        grid-gap: 2rem;
+    }
+
+    .footer{
+        width: 100%;
+        bottom: 0px;
+    }
+}
+
+@media (min-width:550px){
+    body{
+        text-align: left;
+    }
+
+    .popup-form{
+        text-align: center;
+    }
+
+    .proposito{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+
+    .para1{
+        grid-column: 1/2;
+        
+    }
+
+    .img1{
+        padding-right: 1.5rem;
+        margin-top:5px;
+        margin-left:10px;
+        margin-right:5px;
+        margin-bottom:5px;
+        float: right;
+    }
+
+    .texto1 p{
+        font-size: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .cervejas ul{
+        list-style-type: none;
+        text-align:left;
+        font-size: 1.3rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display:grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        justify-items:center; 
+        grid-gap: 2rem;
+        padding: 0px;
+    }
+
+    .proposito img{
+        display: grid;
+        float: right;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+
+}
+
+@media(min-width:775px){    
+    .footer{
+        position: absolute; 
+        width: 100%;
+        bottom: 0px;
+    }
+}
+
+h2{
+    padding-top: 10px;
+    padding-left: 35px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cervejas a,a:visited{
+    color: gray;
+    text-decoration: none;
+}
+
+.cervejas a:hover{
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.menu a,a:visited{
+    color:gray;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color:white;
+    text-decoration:none;
+    font-weight:bolder;
+
+}
+
+.footer ul{
+    list-style-type: none;
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display:grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-gap: 2rem;
+    padding: 0px;
+}
+
+.footer h3{
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer #azul{
+    color:dodgerblue;
+    font-size: 3rem;
+}
+
+.footer #vermelho{
+    color:red;
+    font-size:3rem;
+}
+
+.footer #azul:hover{
+    text-decoration: none;
+    color :dodgerblue;
+    opacity: 50%;
+}
+
+.footer #vermelho:hover{
+    text-decoration: none;
+    color: red;
+    opacity: 50%;
+}
+
+.form-popup h1{
+    text-align: center;
+}
+
+#botao{
+    background-color: #6B3918;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.form1{
+    display: grid;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px;
+}
+
+.button{
+    display: grid;
+    grid-template-columns: repeat(2,100px);
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+.popup-overlay {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100vh;
+    z-index:1;
+    background:rgba(0,0,0,0.5);
+    display:none;
+}
+
+.popup {
+    position:absolute;
+    top:-150%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(1.15);
+    width:300px;
+    height: 310px;
+    background: white;
+    z-index:2;
+    opacity:0;
+    box-shadow:5px 5px 3px rgba(0,0,0,0.4);
+}
+
+body.showLoginForm .popup-overlay {
+    display:block;
+}
+
+body.showLoginForm .popup {
+    top:50%;
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.grow1, .grow2{
+    transition: transform 1s;
+    will-change: scale;
+}
+
+.grow1:hover, .grow2:hover {
+    transform: scale(1.3);
+}
+
+.popup-form{
+    transition: transform 1s;
+    will-change: scale;
+}
+
+.popup-form:hover{
+    transform: scale(1.2);
+}
